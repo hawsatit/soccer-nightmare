@@ -2,12 +2,12 @@
 public abstract class Item {
     private String name;
     private String description;
-    private boolean usable;
+    private Coordinate position;
 
-    public Item(String name, String description, boolean usable) {
+    public Item(String name, String description, Coordinate position) {
+        this.position = position;
         this.name = name;
         this.description = description;
-        this.usable = usable;
     }
 
     public String getName() {
@@ -18,9 +18,10 @@ public abstract class Item {
         return description;
     }
 
-    public boolean isUsable() {
-        return usable;
+    public Coordinate getPosition() {
+        return position;
     }
+
 
     public abstract String use();
 }

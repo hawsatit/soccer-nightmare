@@ -1,56 +1,27 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
-public class Bedroom extends Room      {                  
-    private boolean isLightOn;
+public class Bedroom extends Room{                  
 
-    public Bedroom(int[] coordinates, String name, String description, List<Item> items, Room nextRoom) {
-        super(coordinates, name, description, items, nextRoom);
-        getItems().add(new Waterbottle(3));
+    public Bedroom() {
+        super(new Coordinate(0, 0), "Bedroom", "A cozy bedroom with sunlight streaming through the window.", new ArrayList<>(), new LivingRoom(), new HashMap<>(), false);
+        generateItems();
     }
 
-    public void toggleLight() {
-        isLightOn = !isLightOn;
-        System.out.println("The light is now " + (isLightOn ? "on" : "off") + ".");
-    }
-
-    public boolean isLightOn() {
-        return isLightOn;
-    }
+    
     public void enter() {
-        System.out.println("You wake up in the bedroom. The sunlight streams through the window, and you feel a sense of calm. It's time to start your adventure.");
+        System.out.println("");
     }
 
-    public Go(String direction){        
-        if (direction == north){
-            
-        } else if (direction == east){
-
-        } else if (direction == south){
-
-        } else if (direction == west){
-
-        } else {
-            System.out.println("Invalid direction, please use 'north', 'east', 'south', or 'west'");
-        }}
-
-    public LookAt(String direction){
-        if (direction == north){
-            
-        } else if (direction == east){
-
-        } else if (direction == south){
-
-        } else if (direction == west){
-
-        } else {
-            System.out.println("Invalid direction, please use 'north', 'east', 'south', or 'west'");
-        }
+    protected void generateItems() {
+                getItems().add(new Waterbottle(3, new Coordinate(0, -1)));
+                getItems().add(new Shelf("shelf with trophies and medals", "A shelf adorned with trophies and medals from past victories.", new Coordinate(0, 0)));
+                getItems().add(new BedroomWindow("window with curtains", "A window with curtains that can be drawn to let in sunlight.", new Coordinate(1, 0)));
+                getItems().add(new Door("door", "A sturdy wooden door leading to the next room.", new Coordinate(0, 1)));
+                getItems().add(new Wall("wall", "A solid wall that cannot be passed through.", new Coordinate(-1, -1)));
+                getItems().add(new Wall("wall", "A solid wall that cannot be passed through.", new Coordinate(-1, 1)));
+                getItems().add(new Wall("wall", "A solid wall that cannot be passed through.", new Coordinate(1, 1)));
+                getItems().add(new Wall("wall", "A solid wall that cannot be passed through.", new Coordinate(1, -1)));
     }
-
-    public abstract PickUp(String item){}
-
-    public abstract Use(String item){}
-
-                          
 
 }

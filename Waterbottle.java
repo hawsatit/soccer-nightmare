@@ -1,8 +1,8 @@
 public class Waterbottle extends Item {
     private int waterAmount; // Amount of water in the bottle
 
-    public Waterbottle(int waterAmount) {
-        super("watterbottle", "A bottle filled with refreshing water.", true);
+    public Waterbottle(int waterAmount, Coordinate position) {
+        super("watterbottle", "A bottle filled with refreshing water.", position);
         this.waterAmount = waterAmount;
     }
 

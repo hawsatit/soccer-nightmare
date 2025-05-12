@@ -69,4 +69,13 @@ public class Person {
             }
         }
     }
+
+    public boolean isHolding(String itemName) {
+        for (Item item : hands) {
+            if (item.getName().equalsIgnoreCase(itemName)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
