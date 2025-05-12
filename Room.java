@@ -23,6 +23,70 @@ public abstract class Room {
     public abstract void enter();
     protected abstract void generateItems();
 
+    public Room performCommand(Command command) {
+        switch (command.getType()) {
+            case GO:
+                go(command.getArgument());
+                return this;
+            case LOOK:
+                lookAt(command.getArgument());
+                return this;
+            case USE:
+                Item itemToUse = getItemByName(command.getArgument());
+                if (itemToUse != null && getSpawn().equals(itemToUse.getPosition())) {
+                    System.out.println(itemToUse.use());
+                } else {
+                    System.out.println("Item not accessible.");
+                }
+                return this;
+            case KICK:
+                System.out.println("You kick the ball");
+                return null;
+            case LIGHT:
+                toggleLight();
+                return this;
+            case WALK:
+                Door doorAtPosition = getDoorAtPosition(getSpawn());
+                if (doorAtPosition != null) {
+                    if (doorAtPosition.isOpen()) {
+                        System.out.println("You walk through the door to the next room.");
+                        return getNextRoom();
+                    } else {
+                        System.out.println("The door is closed. You can't walk through.");
+                    }
+                } else {
+                    System.out.println("You need to be at the door to walk to the next room.");
+                }
+                return nextRoom;
+            
+            case UNKNOWN:
+                System.out.println("Unknown command. Please try again.");
+                return this;
+            default:
+                System.out.println("You can't do that right now.");
+                return this;
+        }
+    }
+
+    private Door getDoorAtPosition(Coordinate position) {
+        for (Item item : items) {
+            if (item instanceof Door && item.getPosition().equals(position)) {
+                return (Door) item;
+            }
+        }
+        return null;
+    }
+    
+
+    public Item getItemByName(String itemName) {
+        for (Item item : items) {
+            if (item.getName().equalsIgnoreCase(itemName)) {
+                return item;
+            }
+        }
+        return null;
+    }
+
     private Coordinate getNextCoordinate(String direction) {
         int x = getSpawn().getX();
         int y = getSpawn().getY();
@@ -110,4 +174,6 @@ public abstract class Room {
         }
 
     }
+
+
 }
