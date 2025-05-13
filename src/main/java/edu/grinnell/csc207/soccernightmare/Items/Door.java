@@ -21,7 +21,7 @@ public class Door extends Item {
             return "You close the door.";
         } else {
             isOpen = true;
-            return "You open the door.";
+            return "You open the door. Looks like you can 'walk through the door' now.";
         }
     }
     

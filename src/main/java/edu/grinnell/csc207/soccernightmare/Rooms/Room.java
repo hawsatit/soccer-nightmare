@@ -74,11 +74,12 @@ public abstract class Room {
                         return getNextRoom();
                     } else {
                         System.out.println("The door is closed. You can't walk through.");
+                        return this;
                     }
                 } else {
                     System.out.println("You need to be at the door to walk to the next room.");
+                    return this;
                 }
-                return nextRoom;
             case UNKNOWN:
                 System.out.println("Unknown command. Please try again.");
                 return this;
@@ -162,6 +163,11 @@ public abstract class Room {
         // Prevent walking into walls
         if (nextItem != null && nextItem.getName().equalsIgnoreCase("Wall")) {
             System.out.println("You can't go through the wall.");
+            return;
+        }
+
+        if (currentItem != null && currentItem.getName().equalsIgnoreCase("Door")) {
+            System.out.println("You are at a door! You might want to 'walk through the door'");
             return;
         }
     

@@ -25,7 +25,7 @@ public class Bedroom extends Room{
     protected void generateItems() {
         addItemToRoom(new Waterbottle(3, new Coordinate(0, -1)));
         addItemToRoom(new Wall("wall", "A solid wall that cannot be passed through.", new Coordinate(0, -2)));
-        addItemToRoom(new Shelf("shelf with trophies and medals", "A shelf adorned with trophies and medals from past victories.", new Coordinate(-1, 0)));
+        addItemToRoom(new Shelf("shelf", "A shelf adorned with trophies and medals from past victories.", new Coordinate(-1, 0)));
         addItemToRoom(new Wall("wall", "A solid wall that cannot be passed through.", new Coordinate(-2, 0)));
         addItemToRoom(new BedroomWindow("window", "A window with curtains that can be drawn to let in sunlight.", new Coordinate(1, 0)));
         addItemToRoom(new Door("door", "A sturdy wooden door leading to the next room.", new Coordinate(0, 1)));
