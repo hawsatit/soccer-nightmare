@@ -23,6 +23,8 @@ public class LanguageParser {
             return new Command(CommandType.WALK, "");
         } else if (userInput.startsWith("open curtain")) {
             return new Command(CommandType.OPEN_CURTAIN, "");
+        }else if (userInput.startsWith("pick up remote")) {
+            return new Command(CommandType.PICK_UP_REMOTE, "");
         } else if (userInput.equals("hint")) {
             System.out.println("Here are some commands you can do (This does not contain all commands):"
                     + "\n Go <cardinal directions>"

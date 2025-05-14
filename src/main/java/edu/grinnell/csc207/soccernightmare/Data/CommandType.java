@@ -9,5 +9,6 @@ public enum CommandType {
     WALK,
     HINT,
     OPEN_CURTAIN,
+    PICK_UP_REMOTE,
     UNKNOWN
 }

@@ -11,7 +11,7 @@ import java.util.HashMap;
 
 public class PracticePitch extends Room{
     public PracticePitch() {
-        super( new Coordinate(2, 2),"Practice Pitch", "A well-maintained practice pitch with goalposts at either end.",new ArrayList<>(),null,  new HashMap<>(), true);
+        super( new Coordinate(2, 2),"Practice Pitch", "A well-maintained practice pitch with goalposts at either end.",new ArrayList<>(),null, null, new HashMap<>(), true);
         generateItems();
     }
 
@@ -22,18 +22,17 @@ public class PracticePitch extends Room{
 
     @Override
     protected void generateItems() {
-      
-        getItems().add(new Door("Door to Living Room", "A wooden door leading back to the living room.", new Coordinate(2, 2)));
-        getItems().add(new Goalpost("Goalpost", "A sturdy goalpost for practicing your shots.", new Coordinate(5, 2)));
-        getItems().add(new Football("Football", "A standard football, perfect for kicking around.", new Coordinate(4, 2)));
-        getItems().add(new Fence("Fence", "A tall fence to keep the ball from going out of bounds.", new Coordinate(2, 3)));
-        getItems().add(new Fence("Fence", "A tall fence to keep the ball from going out of bounds.", new Coordinate(2, 1)));
-        getItems().add(new Fence("Fence", "A tall fence to keep the ball from going out of bounds.", new Coordinate(3, 3)));
-        getItems().add(new Fence("Fence", "A tall fence to keep the ball from going out of bounds.", new Coordinate(3, 1)));
-        getItems().add(new Fence("Fence", "A tall fence to keep the ball from going out of bounds.", new Coordinate(4, 3)));
-        getItems().add(new Fence("Fence", "A tall fence to keep the ball from going out of bounds.", new Coordinate(4, 1)));
-        getItems().add(new Fence("Fence", "A tall fence to keep the ball from going out of bounds.", new Coordinate(5, 3)));
-        getItems().add(new Fence("Fence", "A tall fence to keep the ball from going out of bounds.", new Coordinate(5, 1)));
-        getItems().add(new Sign("Sign", "Bob's Practice Field - The goalpost is to the north, and the football is at the center.", new Coordinate(3, 2)));
+        addItemToRoom(new Door("Door to Living Room", "A wooden door leading back to the living room.", new Coordinate(2, 2)));
+        addItemToRoom(new Goalpost("Goalpost", "A sturdy goalpost for practicing your shots.", new Coordinate(5, 2)));
+        addItemToRoom(new Football("Football", "A standard football, perfect for kicking around.", new Coordinate(4, 2)));
+        addItemToRoom(new Fence("Fence", "A tall fence to keep the ball from going out of bounds.", new Coordinate(2, 3)));
+        addItemToRoom(new Fence("Fence", "A tall fence to keep the ball from going out of bounds.", new Coordinate(2, 1)));
+        addItemToRoom(new Fence("Fence", "A tall fence to keep the ball from going out of bounds.", new Coordinate(3, 3)));
+        addItemToRoom(new Fence("Fence", "A tall fence to keep the ball from going out of bounds.", new Coordinate(3, 1)));
+        addItemToRoom(new Fence("Fence", "A tall fence to keep the ball from going out of bounds.", new Coordinate(4, 3)));
+        addItemToRoom(new Fence("Fence", "A tall fence to keep the ball from going out of bounds.", new Coordinate(4, 1)));
+        addItemToRoom(new Fence("Fence", "A tall fence to keep the ball from going out of bounds.", new Coordinate(5, 3)));
+        addItemToRoom(new Fence("Fence", "A tall fence to keep the ball from going out of bounds.", new Coordinate(5, 1)));
+        addItemToRoom(new Sign("Sign", "Bob's Practice Field - The goalpost is to the north, and the football is at the center.", new Coordinate(3, 2)));
     }
 }

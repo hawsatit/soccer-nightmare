@@ -5,6 +5,7 @@ import edu.grinnell.csc207.soccernightmare.Items.BedroomWindow;
 import edu.grinnell.csc207.soccernightmare.Items.Waterbottle;
 import edu.grinnell.csc207.soccernightmare.Rooms.Bedroom;
 import edu.grinnell.csc207.soccernightmare.Rooms.Room;
+import edu.grinnell.csc207.soccernightmare.Rooms.RoomConnector;
 
 import java.util.Scanner;
 
@@ -23,8 +24,10 @@ public class SoccerNightmare {
         * @return
         */
         Boolean playing = true;
-        Room currentRoom = new Bedroom();
+        RoomConnector.connectRooms();
+        Room currentRoom = RoomConnector.bedroom;
         LanguageParser languageParser = new LanguageParser();
+        int waterLevel = 3;
 
         System.out.println("You wake up in a room. You feel extremely dizzy and dehydrated. You don't know who you are or where you are." +
             " \n The room is dark and you can't see anything, but you can feel a lamp next to you. \n use 'hint' whenever");
@@ -39,17 +42,17 @@ public class SoccerNightmare {
                 playing = false;
                 continue;
             }
-
-            if (currentRoom.getName().equals("Bedroom")) {
-                if (counter >= 6) {
-                    Bedroom bedroom = (Bedroom) currentRoom;
-                    Waterbottle waterbottle = (Waterbottle) bedroom.getItems().get(0);
-                    if (waterbottle.getWaterAmount() >= 3) {
-                        System.out.println("You die from dehydration.");
-                        playing = false;
-                    }
-                }
+            if (currentRoom.getName().equals("Bedroom")){
+                Bedroom bedroom = (Bedroom) currentRoom;
+                Waterbottle waterbottle = (Waterbottle) bedroom.getItems().get(0);
+                waterLevel = waterbottle.getWaterAmount();
             }
+            
+            if (counter >= 6 && waterLevel >= 3){
+                System.out.println("You die from dehydration.");
+                playing = false;
+            }
+            
             counter++;
         }
     }
