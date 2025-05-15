@@ -1,7 +1,9 @@
 package edu.grinnell.csc207.soccernightmare.Items;
 import edu.grinnell.csc207.soccernightmare.Data.Coordinate;
 
-
+/**
+ * Represents a couch in the game.
+ */
 public class Couch extends Item {
 
     public Couch(String name, String description, Coordinate position) {

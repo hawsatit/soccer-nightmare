@@ -9,7 +9,9 @@ import edu.grinnell.csc207.soccernightmare.Items.Wall;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
+/**
+ * The living room of the house.
+ */
 public class LivingRoom extends Room { 
     public LivingRoom() {
         super(new Coordinate(0, 1), "Living Room", "A cozy living room with a large window overlooking the garden.", 

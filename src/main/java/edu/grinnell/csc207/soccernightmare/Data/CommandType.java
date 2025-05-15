@@ -1,5 +1,8 @@
 package edu.grinnell.csc207.soccernightmare.Data;
 
+/**
+ * Used to store the different command types
+ */
 public enum CommandType {
     GO,
     LOOK,

@@ -1,7 +1,9 @@
 package edu.grinnell.csc207.soccernightmare.Items;
 import edu.grinnell.csc207.soccernightmare.Data.Coordinate;
 
-
+/**
+ * Represents a door in the game
+ */
 public class Door extends Item {
     private boolean isOpen;
 

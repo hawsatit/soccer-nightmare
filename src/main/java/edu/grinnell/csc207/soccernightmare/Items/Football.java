@@ -1,7 +1,9 @@
 package edu.grinnell.csc207.soccernightmare.Items;
 import edu.grinnell.csc207.soccernightmare.Data.Coordinate;
 
-
+/**
+ * Soccer ball in the game
+ */
 public class Football extends Item {
     private String kickDirection;
 

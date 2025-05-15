@@ -1,6 +1,9 @@
 package edu.grinnell.csc207.soccernightmare.Items;
 import edu.grinnell.csc207.soccernightmare.Data.Coordinate;
 
+/**
+ * Represents the sign in the game.
+ */
 public class Sign extends Item {
     private String message = "Welcome to the pitch! This is no ordinary field; it possesses magical properties that will challenge and amaze you.";
 

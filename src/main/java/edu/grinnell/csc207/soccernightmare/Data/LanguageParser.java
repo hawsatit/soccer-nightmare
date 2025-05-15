@@ -1,5 +1,8 @@
 package edu.grinnell.csc207.soccernightmare.Data;
 
+/**
+ * LanguageParser is used to parse user input and convert it into a Command object.
+ */
 public class LanguageParser {
 
     public LanguageParser() {

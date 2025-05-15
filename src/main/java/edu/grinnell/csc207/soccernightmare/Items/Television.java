@@ -1,6 +1,9 @@
 package edu.grinnell.csc207.soccernightmare.Items;
 import edu.grinnell.csc207.soccernightmare.Data.Coordinate;
 
+/**
+ * Represents the TV in the game
+ */
 public class Television extends Item{
     boolean hasRemote;
     

@@ -9,6 +9,9 @@ import edu.grinnell.csc207.soccernightmare.Rooms.RoomConnector;
 
 import java.util.Scanner;
 
+/**
+ * Main driver class for the game
+ */
 public class SoccerNightmare {
     public static void main(String[] args) {
         // Create a new Person object

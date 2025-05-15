@@ -1,6 +1,11 @@
 package edu.grinnell.csc207.soccernightmare.Items;
 import edu.grinnell.csc207.soccernightmare.Data.Coordinate;
 
+/**
+ * represents the waterbottle in the game. 
+ * We will make it so you have to drink water before 6 trials
+ * or else you die of dehydration
+ */
 public class Waterbottle extends Item {
     private int waterAmount; // Amount of water in the bottle
 

@@ -1,6 +1,9 @@
 package edu.grinnell.csc207.soccernightmare.Data;
 
 
+/**
+ * Used to process a command
+ */
 public class Command {
     private CommandType type;
     private String argument;

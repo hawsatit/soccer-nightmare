@@ -1,5 +1,8 @@
 package edu.grinnell.csc207.soccernightmare.Data;
 
+/**
+ * The coordinate class is used to store the x and y coordinates of an object in the game.
+ */
 public class Coordinate {
     private int x;
     private int y;

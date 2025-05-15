@@ -10,6 +10,9 @@ import edu.grinnell.csc207.soccernightmare.Items.Sign;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * the Practice pitch room
+ */
 public class PracticePitch extends Room{
     public PracticePitch() {
         super( new Coordinate(2, 2),"Practice Pitch", "A well-maintained practice pitch with goalposts at either end.",new ArrayList<>(),null, null, new HashMap<>(), true);

@@ -9,6 +9,11 @@ import edu.grinnell.csc207.soccernightmare.Items.Television;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Abstract class representing a room in the game.
+ * Each room has a name, description, items, and connections to other rooms. 
+ * Commands are also processed here.
+ */
 public abstract class Room {
 
     private String name;

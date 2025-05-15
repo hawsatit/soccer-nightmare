@@ -12,6 +12,9 @@ import edu.grinnell.csc207.soccernightmare.Items.WindowBlocker;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * the bedroom
+ */
 public class Bedroom extends Room{                  
 
     public Bedroom() {

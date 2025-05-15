@@ -1,7 +1,10 @@
 package edu.grinnell.csc207.soccernightmare.Items;
 import edu.grinnell.csc207.soccernightmare.Data.Coordinate;
 
-
+/**
+ * Represents a window in the bedroom.
+ * The window is an item that the player can interact with.
+ */
 public class BedroomWindow extends Item {
     private boolean curtainsClosed = true;
 
