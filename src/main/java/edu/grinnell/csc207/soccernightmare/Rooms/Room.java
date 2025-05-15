@@ -60,7 +60,10 @@ public abstract class Room {
                 }
                 return this;
             case KICK:
-                System.out.println("You kick the ball");
+                System.out.println("You kick the ball and score. All the memories come flooding back. You are a soccer player.");
+                System.out.println("You remember that it was an intense soccer game and you get hit in the head with a ball.");
+                System.out.println("Now your memeory is restored and you are a soccer player.");
+                System.out.println("Game Complete!");
                 return null;
             case LIGHT:
                 toggleLight();
@@ -127,7 +130,7 @@ public abstract class Room {
                 System.out.println("Unknown command. Please try again.");
                 return this;
             default:
-                System.out.println("You can't do that right now.");
+                System.out.println("");
                 return this;
         }
     }
